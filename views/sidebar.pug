@@ -1,0 +1,40 @@
+.sidebar(data-color="white" data-active-color="danger")
+	//
+		Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
+	.logo
+		a.simple-text.logo-mini(href="/")
+			.logo-image-small
+				img(src="/nm/paper-dashboard-2/assets/img/logo-small.png")
+		a.simple-text.logo-normal(href="/") PB UNION
+	.sidebar-wrapper
+		ul.nav
+			li.dropdown(class=active==='index'?'active':'')
+				a(href="#about", data-toggle='collapse', role='button', aria-expanded='false')
+					i.nc-icon.nc-bank
+					p About
+				ul.list-group.collapse.bg-secondary#about
+					li
+						a.my-0.text-white(href='/about') 퍼블유 소개
+					li
+						a.my-0.text-white(href='/representation') 대표소개
+			li.dropdown(class=active==='branding'?'active':'')
+				a(href="#branding" data-toggle="collapse" role="button" aria-expanded="false")
+					i.nc-icon.nc-diamond
+					p 브랜딩
+				ul.list-group.collapse.bg-secondary#branding
+					li
+						a.my-0.text-white(href="/branding/outside") 아웃사이드
+					li
+						a.my-0.text-white(href="/branding/inside") 인사이드
+			li(class=active==='brandingStory'?'active':'')
+				a(href="/brandingStory")
+					i.nc-icon.nc-bell-55
+					p 브랜딩스토리
+			li(class=active==='partnerShip'?'active':'')
+				a(href="/partnerShip")
+					i.nc-icon.nc-single-02
+					p 파트너쉽
+			li(class=active==='request'?'active':'')
+				a(href="/request")
+					i.nc-icon.nc-tile-56
+					p 신청 & 문의
