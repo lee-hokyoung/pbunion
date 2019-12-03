@@ -50,3 +50,33 @@ $(document).ready(function() {
     console.log('e   : ', e);
   })
 });
+
+// 신청하기 클릭 이벤트
+function fnSubmitApply(){
+  let user_name = document.querySelector('input[name="user_name"]');
+  let user_phone = document.querySelector('input[name="user_phone"]');
+  let mention = document.querySelector('textarea[name="mention"]');
+  if(!user_name.value){
+    alert('이름을 입력해주세요');
+    user_name.focus();
+    return false
+  }
+  if(!user_phone.value){
+    alert('연락처를 남겨주세요');
+    user_phone.focus();
+    return false;
+  }
+
+  let xhr = new XMLHttpRequest();
+  xhr.open('POST', '/application', true);
+  xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.onreadystatechange = function(){
+    if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+      let res = JSON.parse(this.response);
+      alert('신청해주셔서 감사합니다.');
+      location.href = '/';
+    }
+  };
+  let data = {user_name:user_name.value, user_phone:user_phone.value, mention:mention.value};
+  xhr.send(JSON.stringify(data));
+}

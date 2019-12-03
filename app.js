@@ -12,10 +12,6 @@ const passportConfig = require('./passport');
 const app = express();
 
 const indexRouter = require('./router/index');
-const brandingRouter = require('./router/branding');
-const brandingStoryRouter = require('./router/brandingStory');
-const partnerShipRouter = require('./router/partnerShip');
-const requestRouter = require('./router/request');
 
 passportConfig(passport);
 
@@ -36,13 +32,13 @@ app.use(express.static(path.join(__dirname, 'public'), {
   // maxAge:'1d'
 }));
 app.use('/paper-kit', express.static(path.join(__dirname, 'public/paper-kit'), {
-  maxAge: '1d'
+  maxAge: '1m'
 }));
 app.use('/cache_img', express.static(path.join(__dirname, 'cache_img'), {
   maxAge: '1m'
 }));
 app.use('/nm', express.static(path.join(__dirname, 'node_modules'), {
-  maxAge: '1d'
+  maxAge: '1m'
 }));
 app.use(session({
   secret: process.env.COOKIE_SECRET,
@@ -55,10 +51,6 @@ app.use(passport.session());
 
 
 app.use('/', indexRouter);
-app.use('/branding', brandingRouter);
-app.use('/brandingStory', brandingStoryRouter);
-app.use('/partnerShip', partnerShipRouter);
-app.use('/request', requestRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

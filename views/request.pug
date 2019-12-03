@@ -3,7 +3,7 @@
 		.row
 			.col-md-8.ml-auto.mr-auto
 				h2.text-center 신청 & 문의
-				form.contact-form
+				form.contact-form(onsubmit='fnSubmitApply(); return false;')
 					.row
 						.col-md-6
 							label 이름
@@ -11,16 +11,16 @@
 								.input-group-prepend
 									span.input-group-text
 										i.nc-icon.nc-single-02
-								input.form-control(type="text" placeholder="")
+								input.form-control(type="text", placeholder="" name='user_name')
 						.col-md-6
 							label 연락처
 							.input-group
 								.input-group-prepend
 									span.input-group-text
 										i.fa.fa-phone
-								input.form-control(type="text" placeholder="")
+								input.form-control(type="text", placeholder="", name='user_phone')
 					label 남길말
-					textarea.form-control(rows="4" placeholder="")
+					textarea.form-control(rows="4", placeholder="", name='mention')
 					.row
 						.col-md-4.ml-auto.mr-auto
-							button.btn.btn-danger.btn-lg.btn-fill Send Message
+							button.btn.btn-danger.btn-lg.btn-fill(type='submit') Send Message
