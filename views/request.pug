@@ -1,8 +1,26 @@
-extends layout
-block content
-	.content
-		.card
-			.card-header
-				h4.card-title 신청 & 문의
-			.card-body
-			.card-footer
+.section#request
+	.container
+		.row
+			.col-md-8.ml-auto.mr-auto
+				h2.text-center 신청 & 문의
+				form.contact-form
+					.row
+						.col-md-6
+							label 이름
+							.input-group
+								.input-group-prepend
+									span.input-group-text
+										i.nc-icon.nc-single-02
+								input.form-control(type="text" placeholder="")
+						.col-md-6
+							label 연락처
+							.input-group
+								.input-group-prepend
+									span.input-group-text
+										i.fa.fa-phone
+								input.form-control(type="text" placeholder="")
+					label 남길말
+					textarea.form-control(rows="4" placeholder="")
+					.row
+						.col-md-4.ml-auto.mr-auto
+							button.btn.btn-danger.btn-lg.btn-fill Send Message
