@@ -29,18 +29,10 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 app.use(cookieParser(process.env.COOKIE_SECRET));
-app.use(express.static(path.join(__dirname, 'public'), {
-  // maxAge:'1d'
-}));
-app.use('/paper-kit', express.static(path.join(__dirname, 'public/paper-kit'), {
-  maxAge: '1m'
-}));
-app.use('/cache_img', express.static(path.join(__dirname, 'cache_img'), {
-  maxAge: '1m'
-}));
-app.use('/nm', express.static(path.join(__dirname, 'node_modules'), {
-  maxAge: '1m'
-}));
+app.use(express.static(path.join(__dirname, 'public'), {maxAge:'1d'}));
+app.use('/paper-kit', express.static(path.join(__dirname, 'public/paper-kit'), {maxAge: '1m'}));
+app.use('/cache_img', express.static(path.join(__dirname, 'cache_img'), {maxAge: '1m'}));
+app.use('/nm', express.static(path.join(__dirname, 'node_modules'), {maxAge: '1m'}));
 app.use(session({
   secret: process.env.COOKIE_SECRET,
   resave: false,

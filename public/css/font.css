@@ -1,5 +1,6 @@
 .h1, .h2, .h3, .h4, .h5, .h6, p, span, a, strong{font-family: 'Nanum Gothic', sans-serif;}
-h1, h2, h3, h4, h5, h6{font-family: 'Single Day', cursive;}
+h1, h2, h3, h4, h5, h6{font-family: 'Nanum Gothic', sans-serif;}
+.dohyeonFont{font-family:'Do Hyeon', sans-serif}
 .icon-custom{font: normal normal normal 14px/1 nucleo-icons; font-size:1.25rem;}
 .icon-custom:before{padding-right:1rem;}
 .icon-custom.icon-location:before{content:'\ea53'}

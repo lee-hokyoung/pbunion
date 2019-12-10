@@ -5,4 +5,5 @@ a:focus{outline: none;}
         position: static;
         height: auto;
     }
+    .page-header{min-height:300px;}
 }
