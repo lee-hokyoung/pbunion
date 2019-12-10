@@ -1,45 +1,37 @@
-nav.navbar.navbar-expand-lg.navbar-absolute.fixed-top.navbar-transparent
-	.container-fluid
-		.navbar-wrapper
-			.navbar-toggle
-				button.navbar-toggler(type="button")
-					span.navbar-toggler-bar.bar1
-					span.navbar-toggler-bar.bar2
-					span.navbar-toggler-bar.bar3
-			a.navbar-brand(href="#pablo") #{title}
-		//button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation")
-		//	span.navbar-toggler-bar.navbar-kebab
-		//	span.navbar-toggler-bar.navbar-kebab
-		//	span.navbar-toggler-bar.navbar-kebab
-		//#navigation.collapse.navbar-collapse.justify-content-end
-		//	form
-		//		.input-group.no-border
-		//			input.form-control(type="text" value="" placeholder="Search...")
-		//			.input-group-append
-		//				.input-group-text
-		//					i.nc-icon.nc-zoom-split
-		//	ul.navbar-nav
-		//		li.nav-item
-		//			a.nav-link.btn-magnify(href="#pablo")
-		//				i.nc-icon.nc-layout-11
-		//				p
-		//					span.d-lg-none.d-md-block Stats
-		//		li.nav-item.btn-rotate.dropdown
-		//			a#navbarDropdownMenuLink.nav-link.dropdown-toggle(href="http://example.com" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
-		//				i.nc-icon.nc-bell-55
-		//				p
-		//					span.d-lg-none.d-md-block Some Actions
-		//			.dropdown-menu.dropdown-menu-right(aria-labelledby="navbarDropdownMenuLink")
-		//				a.dropdown-item(href="#") Action
-		//				a.dropdown-item(href="#") Another action
-		//				a.dropdown-item(href="#") Something else here
-		//		li.nav-item
-		//			a.nav-link.btn-rotate(href="#pablo")
-		//				i.nc-icon.nc-settings-gear-65
-		//				p
-		//					span.d-lg-none.d-md-block Account
-// End Navbar
-//
-	<div class="panel-header panel-header-lg">
-	<canvas id="bigDashboardChart"></canvas>
-	</div>
+nav.navbar.navbar-expand-lg.fixed-top.navbar-transparent(color-on-scroll="300")
+	.container
+		.navbar-translate
+			a.navbar-brand(href="/" rel="tooltip" title="Personal Branding UNION" data-placement="bottom")
+				| PB UNION
+			button.navbar-toggler.navbar-toggler(type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation")
+				span.navbar-toggler-bar.bar1
+				span.navbar-toggler-bar.bar2
+				span.navbar-toggler-bar.bar3
+		#navigation.collapse.navbar-collapse.justify-content-end
+			ul.navbar-nav
+				li.nav-item.dropdown
+					a#navbarDropdownAbout.nav-link.dropdown-toggle(href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+						i.fa.fa-heart
+						p About
+					.dropdown-menu(aria-labelledby="navbarDropdownAbout")
+						a.dropdown-item(href="#about") 퍼블유 소개
+						a.dropdown-item(href="#representation") 대표소개
+				li.nav-item.dropdown
+					a#navbarDropdownBrand.nav-link.dropdown-toggle(href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+						i.fa.fa-heart
+						p 브랜딩
+					.dropdown-menu(aria-labelledby="navbarDropdownBrand")
+						a.dropdown-item(href="#about") 아웃사이드
+						a.dropdown-item(href="#representation") 인사이드
+				li.nav-item
+					a.nav-link(rel="tooltip" title="Like us on Facebook" data-placement="bottom" href="#brandingStory")
+						i.fa.fa-cog
+						p 브랜딩스토리
+				li.nav-item
+					a.nav-link(rel="tooltip" title="파트너쉽" data-placement="bottom" href="#partnership")
+						i.fa.fa-check
+						p 파트너쉽
+				li.nav-item
+					a.nav-link(rel="tooltip" title="신청 & 문의" data-placement="bottom" href="#request")
+						i.fa.fa-circle-thin
+						p 신청 & 문의
