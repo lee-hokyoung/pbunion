@@ -11,27 +11,35 @@ nav.navbar.navbar-expand-lg.fixed-top.navbar-transparent(color-on-scroll="300")
 			ul.navbar-nav
 				li.nav-item.dropdown
 					a#navbarDropdownAbout.nav-link.dropdown-toggle(href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
-						i.fa.fa-heart
+						i.fas.fa-info-circle
 						p About
 					.dropdown-menu(aria-labelledby="navbarDropdownAbout")
-						a.dropdown-item(href="#about") 퍼블유 소개
-						a.dropdown-item(href="#representation") 대표소개
+						a.dropdown-item(href="#about")
+							i.fas.fa-coffee
+							| 퍼블유 소개
+						a.dropdown-item(href="#representation")
+							i.fas.fa-user
+							| 대표소개
 				li.nav-item.dropdown
 					a#navbarDropdownBrand.nav-link.dropdown-toggle(href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
-						i.fa.fa-heart
+						i.fas.fa-heart
 						p 브랜딩
 					.dropdown-menu(aria-labelledby="navbarDropdownBrand")
-						a.dropdown-item(href="#about") 아웃사이드
-						a.dropdown-item(href="#representation") 인사이드
+						a.dropdown-item(href="#outside")
+							i.fas.fa-child
+							| 아웃사이드
+						a.dropdown-item(href="#inside")
+							i.fas.fa-user-circle
+							| 인사이드
 				li.nav-item
 					a.nav-link(rel="tooltip" title="Like us on Facebook" data-placement="bottom" href="#brandingStory")
-						i.fa.fa-cog
+						i.fas.fa-dove
 						p 브랜딩스토리
 				li.nav-item
 					a.nav-link(rel="tooltip" title="파트너쉽" data-placement="bottom" href="#partnership")
-						i.fa.fa-check
+						i.fas.fa-handshake
 						p 파트너쉽
 				li.nav-item
 					a.nav-link(rel="tooltip" title="신청 & 문의" data-placement="bottom" href="#request")
-						i.fa.fa-circle-thin
+						i.fas.fa-address-card
 						p 신청 & 문의

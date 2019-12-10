@@ -1,38 +1,26 @@
 .section#request
 	.container
-		.card
-			.card-header
-				.h4.text-center.text-secondary 신청 & 문의
-			.row
-				.col-md-5.ml-auto
-					.card-body
-						.d-flex.flex-column.justify-content-between
-							.info
-								h4.icon-custom.icon-location 오시는 길
-								span.text-secondary 서울시 금천구 00로 00길 00-0
-							.info
-								h4.icon-custom.icon-sns SNS
-								.d-flex.justify-content-start.flex-row
-									a(href='#')
-										img(src='https://cdn.worldvectorlogo.com/logos/kakaotalk.svg', alt='카카오톡', width=40)
-									a.pl-3(href='#')
-										img(src='https://upload.wikimedia.org/wikipedia/commons/9/96/Instagram.svg', alt='인스타그램', width=40)
-									a.pl-3(href='#')
-										img(src='https://upload.wikimedia.org/wikipedia/commons/c/c2/F_icon.svg', alt='페이스북', width=40)
-				.col-md-5.mr-auto
-					.card-body
-						form
-							.form-row
-								.form-group.col-md-6
-									label(for='user_name') 이름
-									input#user_name.form-control
-								.form-group.col-md-6
-									label(for='user_tel') 연락처
-									input#user_tel.form-control
-							.form-row
-								.form-group.col-md-12
-									label(for='user_mention') 남길말
-									textarea#user_mention.form-control
-							.form-row
-								.col-md-4.ml-auto
-									button.btn.btn-primary.w-100 전송
+		.row
+			.col-md-8.ml-auto.mr-auto
+				h2.text-center 신청 & 문의
+				form.contact-form(onsubmit='fnSubmitApply(); return false;')
+					.row
+						.col-md-6
+							label 이름
+							.input-group
+								.input-group-prepend
+									span.input-group-text
+										i.nc-icon.nc-single-02
+								input.form-control(type="text", placeholder="" name='user_name')
+						.col-md-6
+							label 연락처
+							.input-group
+								.input-group-prepend
+									span.input-group-text
+										i.fa.fa-phone
+								input.form-control(type="text", placeholder="", name='user_phone')
+					label 남길말
+					textarea.form-control(rows="4", placeholder="", name='mention')
+					.row
+						.col-md-4.ml-auto.mr-auto
+							button.btn.btn-danger.btn-lg.btn-fill(type='submit') Send Message

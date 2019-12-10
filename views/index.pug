@@ -14,8 +14,12 @@ html(lang="en")
     // CSS Files
     link(href="/paper-kit/assets/css/bootstrap.min.css" rel="stylesheet")
     link(href="/paper-kit/assets/css/paper-kit.css?v=2.2.0" rel="stylesheet")
+    link(href="/paper-kit/assets/css/all.min.css" rel="stylesheet")
+
+    // custom CSS
+    link(href="/css/layout.css" rel="stylesheet")
     // CSS Just for demo purpose, don't include it in your project
-    link(href="/paper-kit/assets/demo/demo.css" rel="stylesheet")
+    //link(href="/paper-kit/assets/demo/demo.css" rel="stylesheet")
   body.index-page.sidebar-collapse
     // Navbar
     include nav
@@ -24,60 +28,42 @@ html(lang="en")
     .main
       include about
       include representation
-
+      include outside
+      include inside
+      include brandingStory
+      include partnerShip
       include request
+      include way
 
-      footer.footer.footer-black.footer-white
-        .container-fluid
-          .row
-            nav.footer-nav
-              ul
-                li
-                  a(href="#about") 회사소개
-                li
-                  a(href="#representation") 대표소개
-                li
-                  a(href="#way") 오시는 길
-            .credits.ml-auto
-              span.copyright
-                | © 퍼스널브랜드 유니온, made with
-                i.fa.fa-heart.heart
-                |  by Ho.IT
-      // Core JS Files
-      script(src="/paper-kit/assets/js/core/jquery.min.js" type="text/javascript")
-      script(src="/paper-kit/assets/js/core/popper.min.js" type="text/javascript")
-      script(src="/paper-kit/assets/js/core/bootstrap.min.js" type="text/javascript")
-      // Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/
-      script(src="/paper-kit/assets/js/plugins/bootstrap-switch.js")
-      // Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/
-      script(src="/paper-kit/assets/js/plugins/nouislider.min.js" type="text/javascript")
-      // Plugin for the DatePicker, full documentation here: https://github.com/uxsolutions/bootstrap-datepicker
-      script(src="/paper-kit/assets/js/plugins/moment.min.js")
-      script(src="/paper-kit/assets/js/plugins/bootstrap-datepicker.js" type="text/javascript")
-      // Control Center for Paper Kit: parallax effects, scripts for the example pages etc
-      script(src="/paper-kit/assets/js/paper-kit.js?v=2.2.0" type="text/javascript")
-      script.
-        $(document).ready(function() {
-          if ($("#datetimepicker").length != 0) {
-            $('#datetimepicker').datetimepicker({
-              icons: {
-                time: "fa fa-clock-o",
-                date: "fa fa-calendar",
-                up: "fa fa-chevron-up",
-                down: "fa fa-chevron-down",
-                previous: 'fa fa-chevron-left',
-                next: 'fa fa-chevron-right',
-                today: 'fa fa-screenshot',
-                clear: 'fa fa-trash',
-                close: 'fa fa-remove'
-              }
-            });
-          }
-          function scrollToDownload() {
-            if ($('.section-download').length != 0) {
-              $("html, body").animate({
-                scrollTop: $('.section-download').offset().top
-              }, 1000);
-            }
-          }
-        });
+    footer.footer.footer-black.footer-white
+      .container
+        .row
+          nav.footer-nav
+            ul
+              li
+                a(href="#about") 회사소개
+              li
+                a(href="#representation") 대표소개
+              li
+                a(href="#way") 오시는 길
+          .credits.ml-auto
+            span.copyright
+              | © 퍼스널브랜드 유니온, made with
+              i.fa.fa-heart.heart
+              |  by Ho.IT
+    // Core JS Files
+    script(src="/paper-kit/assets/js/core/jquery.min.js" type="text/javascript")
+    script(src="/paper-kit/assets/js/core/popper.min.js" type="text/javascript")
+    script(src="/paper-kit/assets/js/core/bootstrap.min.js" type="text/javascript")
+    // Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/
+    script(src="/paper-kit/assets/js/plugins/bootstrap-switch.js")
+    // Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/
+    script(src="/paper-kit/assets/js/plugins/nouislider.min.js" type="text/javascript")
+    // Plugin for the DatePicker, full documentation here: https://github.com/uxsolutions/bootstrap-datepicker
+    script(src="/paper-kit/assets/js/plugins/moment.min.js")
+    script(src="/paper-kit/assets/js/plugins/bootstrap-datepicker.js" type="text/javascript")
+    // Control Center for Paper Kit: parallax effects, scripts for the example pages etc
+    script(src="/paper-kit/assets/js/paper-kit.js" type="text/javascript")
+    script(type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a808278c2a3cff6f949c8b7a63e44534")
+    script(src='/javascripts/custom.js', type='text/javascript')
+

@@ -1,3 +1,4 @@
+a:focus{outline: none;}
 @media screen and (max-width: 991px) {
     .dropdown.show .dropdown-menu {
         display: block;
