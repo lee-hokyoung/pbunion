@@ -1,0 +1,12 @@
+.btn-append:after{
+    padding: .2rem .4rem;
+    border-radius: 5px;
+    float: right;
+    font-size: 11px;
+    cursor:pointer;
+}
+.btn-append[data-title='삭제']:after{
+    content:'삭제';
+    background-color:red;
+    color:white;
+}
