@@ -2,17 +2,18 @@ extends admin_layout
 block content
 	.content
 		.row
-			ul.list-group
-				li.list-group-item
-					.row
-						.col-1 #
-						.col-2 이름
-						.col-3 연락처
-						.col-md-6 남기는 말
-				each item, idx in list
-					li.list-group-item
-						.row
-							.col-1 #{idx + 1}
-							.col-2 #{item.user_name}
-							.col-3 #{item.user_phone}
-							.col-md-6 #{item.mention}
+			.col-md-10.mx-auto
+				ul.list-group.list-group-flush
+					li.list-group-item.list-group-item-primary
+						.row.font-weight-bold
+							.col-2.col-md-1 #
+							.col-3.col-md-2 이름
+							.col-7.col-md-3 연락처
+							.col-12.col-md-6 남기는 말
+					each item, idx in list
+						li.list-group-item(class=idx%2===0?'list-group-item-secondary':'')
+							.row
+								.col-2.col-md-1 #{idx + 1}
+								.col-3.col-md-2 #{item.user_name}
+								.col-7.col-md-3 #{item.user_phone}
+								.col-12.col-md-6 #{item.mention}

@@ -1,5 +1,4 @@
-// const local = require('./localStrategy');
-// const kakao = require('./kakaoStrategy');
+const local = require('./localStrategy');
 const userModel = require('../model/userModel');
 /*
 *   전체 과정
@@ -38,6 +37,5 @@ module.exports = (passport) => {
       done(e);
     }
   });
-  // local(passport);
-  // kakao(passport);
+  local(passport);
 };
